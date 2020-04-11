@@ -1,0 +1,21 @@
+plugins {
+    id "org.joinfaces" version "4.1.5"
+}
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.joinfaces:jsf-spring-boot-starter"
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
